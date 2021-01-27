@@ -17,7 +17,7 @@
 
                 @forelse ($cidades as $cidade)
                     <tr>
-                        <td>{{$cidade}}</td>
+                        <td>{{$cidade->name}}</td>
 
                         <td class="right-align">Excluir - Remover</td>
                     </tr>
@@ -30,5 +30,10 @@
             </tbody>
         </table>
 
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large waves-effect waves-light" href="{{route('formAdd')}}"><!--Dessa forma eu estou lincando pelo nome da rota e não endereço da rota-->
+                <i class="large material-icons">add</i>
+            </a>
+        </div>
     </section>
 @endsection

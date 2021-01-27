@@ -17,8 +17,11 @@ use App\Http\Controllers\adm\CidadeController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::prefix('cidade')->group(function(){//Essa é uma forma de agrupar rotas que tem uma base comum, nesse caso é a palavra cidade
+    Route::get('/', [CidadeController::class, 'cidades'])->name('listaCidades');//o name serve para dar nomes as rotas
+    Route::get('/add', [CidadeController::class, 'formAdd'])->name('formAdd');
+});
 
-Route::get('/cidade', [CidadeController::class, 'cidades']);
 
 Route::get('/dia', function () {
     return view('cidades');
