@@ -44,5 +44,12 @@
     <!--Essa é uma configuração do materialize - CSS para a parte do javascript-->
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        //Parte de código do javascript para lançar a mensagem de confirmação de que foi salvo
+        @if (session('sucesso'))//--Se sim ele entra  e mostra a mensagem
+            M.toast({html: "{{session('sucesso')}}"})
+        @endif
+    </script>
 </body>
 </html>

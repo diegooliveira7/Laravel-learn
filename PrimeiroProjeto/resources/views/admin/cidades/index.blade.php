@@ -35,5 +35,7 @@
                 <i class="large material-icons">add</i>
             </a>
         </div>
+        {{--Serve para verificar se exixte algum dado salvo na sessão--}}
+
     </section>
 @endsection

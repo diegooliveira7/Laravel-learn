@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Cidade extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name'];//o campo name é o campo em que eu permito que tenha atribuição em massa
 }
